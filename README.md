@@ -169,8 +169,6 @@ This project is open-source and free to use for educational or research purposes
 ---
 
 
----
-
 <div align="center">
 <h3>For any query/help ,please contact our developer:</h3>  
 Developer : <a href="https://www.linkedin.com/in/Khatoonintech/" target="_blank">Ayesha Noreen</a><br>
