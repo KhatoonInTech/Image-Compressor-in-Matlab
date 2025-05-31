@@ -65,13 +65,12 @@ This project demonstrates **image compression** using the **2D Fast Fourier Tran
 
 ## 📂 File Structure
 
-```bash
+
 .
 ├── [fft_image_compress_color.m](../fft_image_compress_color.m)       # Main MATLAB function
 ├── [input_image.png](../input_image.png)                  # Sample test image (or any RGB image)
 ├── [compressed_output.png](../compressed_output.png)            # Output figure saved by script
 ├── [README.md](../README.md)                        # Project documentation
-```
 ---
 
 ## 🚀 How It Works
