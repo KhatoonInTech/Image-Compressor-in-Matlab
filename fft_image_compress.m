@@ -37,8 +37,7 @@ function compressed_img = fft_image_compress(image_path)
     % Step 3: Show result
     figure;
     subplot(1,2,1); imshow(imread(image_path)); title('Original Image');
-    subplot(1,2,2); imshow(compressed_img);
-    % title(['Compressed RGB (', num2str(100-(keep_ratio*100)), '%)']);
+    subplot(1,2,2); imshow(compressed_img); title(['Compressed RGB (', num2str(100-(keep_ratio*100)), '%)']);
 
     % Save output figure
 exportgraphics(gcf, 'compressed_output.png', 'Resolution', 300);
