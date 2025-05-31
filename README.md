@@ -67,10 +67,10 @@ This project demonstrates **image compression** using the **2D Fast Fourier Tran
 
 ```bash
 .
-├── fft_image_compress_color.m       # Main MATLAB function
-├── input_image.png                  # Sample test image (or any RGB image)
-├── compressed_output.png            # Output figure saved by script
-├── README.md                        # Project documentation
+├── [fft_image_compress_color.m](../fft_image_compress_color.m)       # Main MATLAB function
+├── [input_image.png](../input_image.png)                  # Sample test image (or any RGB image)
+├── [compressed_output.png](../compressed_output.png)            # Output figure saved by script
+├── [README.md](../README.md)                        # Project documentation
 ```
 ---
 
@@ -95,7 +95,7 @@ git clone https://github.com/KhatoonInTech/Image-Compressor-in-Matlab.git
 cd Image-Compressor-in-Matlab
 ```
 
-> Make sure the cloned folder contains `fft_image_compress_color.m` and at least one image (e.g., `input_image.png`).
+> Make sure the cloned folder contains `fft_image_compress.m` and at least one image (e.g., `input_image.png`).
 
 ---
 
