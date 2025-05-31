@@ -44,6 +44,6 @@ function compressed_img = fft_image_compress(image_path,keep_ratio)
     % Save output figure
     exportgraphics(gcf, 'ORIGINAL vs COMPRESSED.png', 'Resolution', 300);
     % Save enhanced image
-    imwrite(enhanced_img, 'OUTPUT.png');
+    imwrite(compressed_img, 'OUTPUT.png');
 
 end
