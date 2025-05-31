@@ -1,15 +1,17 @@
 
-function compressed_img = fft_image_compress(image_path)
+function compressed_img = fft_image_compress(image_path,keep_ratio)
 % Compresses a color image using 2D FFT on each RGB channel.
 % INPUT:
 %   image_path  - path to the image file
+%   keep_ratio  - compressed ratio
 % OUTPUT:
-%   compressed_img - compressed RGB image (uint8)
+%   COMPRESSED - compressed RGB image (uint8)
+%   compressed_img - comparison between original and Compressed Image
 
     % Step 1: Read image
     img = imread(image_path);
     img = im2double(img);  % Scale to [0,1]
-    keep_ratio=0.05;
+    
     % Initialize compressed image
     compressed_img = zeros(size(img));
     
@@ -40,5 +42,9 @@ function compressed_img = fft_image_compress(image_path)
     subplot(1,2,2); imshow(compressed_img); title(['Compressed RGB (', num2str(100-(keep_ratio*100)), '%)']);
 
     % Save output figure
-exportgraphics(gcf, 'compressed_output.png', 'Resolution', 300);
+    exportgraphics(gcf, 'compressed_output.png', 'Resolution', 300);
+    % Save enhanced image
+    [~, name, ~] = fileparts(image_path);
+    imwrite(enhanced_img, [ name,'COMPRESSED.png']);
+
 end
