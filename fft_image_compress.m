@@ -5,9 +5,9 @@ function compressed_img = fft_image_compress(image_path,keep_ratio)
 %   image_path  - path to the image file
 %   keep_ratio  - compressed ratio
 % OUTPUT:
-%   COMPRESSED - compressed RGB image (uint8)
-%   compressed_img - comparison between original and Compressed Image
-
+%   OUTPUT.png - compressed RGB image (uint8)
+%   ORIGINAL vs COMPRESSED.png  - comparison of origial image with output
+%   image
     % Step 1: Read image
     img = imread(image_path);
     img = im2double(img);  % Scale to [0,1]
@@ -42,9 +42,8 @@ function compressed_img = fft_image_compress(image_path,keep_ratio)
     subplot(1,2,2); imshow(compressed_img); title(['Compressed RGB (', num2str(100-(keep_ratio*100)), '%)']);
 
     % Save output figure
-    exportgraphics(gcf, 'compressed_output.png', 'Resolution', 300);
+    exportgraphics(gcf, 'ORIGINAL vs COMPRESSED.png', 'Resolution', 300);
     % Save enhanced image
-    [~, name, ~] = fileparts(image_path);
-    imwrite(enhanced_img, [ name,'COMPRESSED.png']);
+    imwrite(enhanced_img, 'OUTPUT.png');
 
 end
